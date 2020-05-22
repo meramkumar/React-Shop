@@ -19,10 +19,13 @@ steps:
     versionSpec: '12.x'
   displayName: 'Install Node.js'
 
-- script: |  
-    npm install --force
-    npm run build 
-  displayName: 'npm update and build'
+
+script: 'npm --prefix ./$(frontDirName) install ./$(frontDirName)'
+  displayName: Client - installation
+
+script: 'npm run build --prefix $(frontDirName)'
+    displayName: Client - Build
+
 
 
 - task: ArchiveFiles@2
