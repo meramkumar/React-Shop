@@ -20,9 +20,9 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |  
-    npm install
+    npm update
     npm run build 
-  displayName: 'npm install and build'
+  displayName: 'npm update and build'
 
 
 - task: ArchiveFiles@2
