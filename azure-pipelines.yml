@@ -20,11 +20,11 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
-    pushd $(uiSource)
+   
     npm install --force
     yarn install  --force
     yarn build
-    popd
+   
   displayName: 'npm/yarn install and build'
 
 
