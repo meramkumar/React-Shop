@@ -9,6 +9,8 @@ trigger:
 variables:
   uiSource : 'src'
   uiBuild  : 'build'
+  variables:
+  npm_config_cache: $(Pipeline.Workspace)/.npm
 
 pool:
   vmImage: 'windows-latest'
@@ -19,10 +21,19 @@ steps:
     versionSpec: '12.x'
     checkLatest: true
   displayName: 'Install Node.js'
+  
+- task: Cache@2
+  inputs:
+    key: 'npm | "$(Agent.OS)" | package.json'
+    restoreKeys: |
+       npm | "$(Agent.OS)"
+    path: $(npm_config_cache)
+  displayName: Cache npm
 
 - script: |  
-    npm install --force
-    npm run build --force
+    npm ci
+    npm install
+    npm run build
   displayName: 'npm update and build'
 
 
