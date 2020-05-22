@@ -20,9 +20,8 @@ steps:
   displayName: 'Install Node.js'
 
 - script: | 
-    npm install --force
-    npm install pm2@latest
-    npm run build --force
+    npm install
+    npm run build 
   displayName: 'npm install and build'
 
 
