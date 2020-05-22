@@ -11,7 +11,7 @@ variables:
   uiBuild  : 'build'
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: 'windows-latest'
 
 steps:
 - task: NodeTool@0
@@ -19,8 +19,8 @@ steps:
     versionSpec: '12.x'
   displayName: 'Install Node.js'
 
-- script: | 
-    npm install --force
+- script: |  
+    npm install
     npm run build 
   displayName: 'npm install and build'
 
