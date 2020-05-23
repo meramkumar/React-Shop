@@ -1,8 +1,4 @@
-
-[https://dev.azure.com/meramkumar/React-Shop/_apis/build/status/React-Shop-WebApp]
-
-[https://vsrm.dev.azure.com/meramkumar/_apis/public/Release/badge/1f1e91bc-e6fe-40f8-bf64-97d685f0f963/4/4]
-
+[![Build Status](https://dev.azure.com/meramkumar/React-Shop/_apis/build/status/React-Shop-WebApp?branchName=master)](https://dev.azure.com/meramkumar/React-Shop/_build/latest?definitionId=7&branchName=master)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
