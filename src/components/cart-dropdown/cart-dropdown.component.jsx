@@ -7,13 +7,13 @@ import CustomButton from '../form-button/form-button.component';
 import CartItem from '../cart-item/cart-item.component';
 
 const CartDropDown = ({ cartItems }) =>
-    (
-        <div className='cart-dropdown'>
+    (<div className='cart-dropdown'>
             <div className='cart-items'>
                 {
-                    cartItems.map(cartItem => (<CartItem key={cartItem.id} item={cartItem} />))
+                    cartItems.map(cartItem => (<CartItem key={cartItem.id} item={cartItem}></CartItem>))
                 }
-            </div> 
+        </div> 
+        
             <CustomButton>Go to Checkout</CustomButton>
         </div>
     );
